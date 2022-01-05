@@ -19,6 +19,12 @@ public class RelazioniApiController {
     @Autowired
     ArticleRepo articleRepo;
 
+    @GetMapping("/api/v1/users")
+    ArrayList<User> userList(){
+        ArrayList<User> users = (ArrayList<User>) repo.findAll();
+        return users;
+    }
+
     @PostMapping("/api/v1/users")
     User newUser(@RequestBody User user){
         User userSave = repo.save(user);
