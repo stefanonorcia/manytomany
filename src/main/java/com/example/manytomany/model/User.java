@@ -21,6 +21,8 @@ public class User {
 
     public String telephone;
 
+    public String email;
+    
     @ManyToMany(mappedBy = "users", fetch = FetchType.LAZY)
     List<Article> articles = new ArrayList<>();
 
