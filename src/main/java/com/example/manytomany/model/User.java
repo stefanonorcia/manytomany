@@ -19,6 +19,8 @@ public class User {
 
     public String code;
 
+    public String telephone;
+
     @ManyToMany(mappedBy = "users", fetch = FetchType.LAZY)
     List<Article> articles = new ArrayList<>();
 
@@ -60,5 +62,13 @@ public class User {
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 }
