@@ -19,6 +19,8 @@ public class User {
 
     public String code;
 
+    public String email;	
+
     @ManyToMany(mappedBy = "users", fetch = FetchType.LAZY)
     List<Article> articles = new ArrayList<>();
 
